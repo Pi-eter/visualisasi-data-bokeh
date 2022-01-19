@@ -85,9 +85,6 @@ plot.legend.location = "top_left"
 #menambahkan hover tool
 plot.add_tools(HoverTool(tooltips=[("Stock Name", "@Name"),("Volume", "@Volume"),]))
 
-#show plot
-show(plot)
-
 """**Update Function**"""
 
 def update_plot(attr, old, new):
