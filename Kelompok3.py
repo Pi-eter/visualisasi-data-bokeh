@@ -97,8 +97,8 @@ def update_plot(attr, old, new):
     new_stocks1 = data_stock[data_stock['Name'] == stock1]
     new_stocks2 = data_stock[data_stock['Name'] == stock2]
 
-    data1 = new_stocks1
-    data2 = new_stocks2
+    data1 = ColumnDataSource(new_stocks1)
+    data2 = ColumnDataSource(new_stocks2)
 
     plot.xaxis.axis_label = stock1
     plot.yaxis.axis_label = stock2
