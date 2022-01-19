@@ -92,8 +92,8 @@ def update_plot(attr, old, new):
     stock1 = select1.value
     stock2 = select2.value
 
-    stocks1 = data_stock[data_stock['Name'] == stock1]
-    stocks2 = data_stock[data_stock['Name'] == stock2]
+    new_stocks1 = data_stock[data_stock['Name'] == stock1]
+    new_stocks2 = data_stock[data_stock['Name'] == stock2]
 
     new_data1 = ColumnDataSource(new_stocks1)
     new_data2 = ColumnDataSource(new_stocks2) 
