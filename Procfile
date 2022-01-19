@@ -1,1 +1,1 @@
-web: bokeh serve --port=$PORT --allow-websocket-origin=kelompok3-stocks.herokuapp.com --address=0.0.0.0 --use-xheader Kelompok3.py
+web: bokeh serve --port=$PORT --allow-websocket-origin=visdat04.herokuapp.com --address=0.0.0.0 --use-xheader Kelompok3.py
