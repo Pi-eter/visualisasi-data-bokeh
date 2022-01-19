@@ -77,8 +77,8 @@ data2 = ColumnDataSource(stocks2)
 plot = figure(x_axis_type='datetime', x_axis_label='Date', y_axis_label='Volume', title='Stock Volume', plot_height=600, plot_width=1200)
 
 #plot adj close untuk setiap indeks saham menggunakan line plot
-plot.line(x='Date', y='Volume', source=data1, color='red')
-plot.line(x='Date', y='Volume', source=data2, color='green')
+plot.line(x='Date', y='Volume', source=data1, color='red', legend_label=stock1)
+plot.line(x='Date', y='Volume', source=data2, color='green', legend_label=stock2)
 
 plot.legend.location = "top_left"
 
