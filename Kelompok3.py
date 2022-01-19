@@ -80,6 +80,8 @@ plot = figure(x_axis_type='datetime', x_axis_label='Date', y_axis_label='Volume'
 plot.line(x='Date', y='Volume', source=data1, color='red')
 plot.line(x='Date', y='Volume', source=data2, color='green')
 
+plot.legend.location = "top_left"
+
 #menambahkan hover tool
 plot.add_tools(HoverTool(tooltips=[("Stock Name", "@Name"),("Volume", "@Volume"),]))
 
@@ -95,11 +97,8 @@ def update_plot(attr, old, new):
     new_stocks1 = data_stock[data_stock['Name'] == stock1]
     new_stocks2 = data_stock[data_stock['Name'] == stock2]
 
-    new_data1 = ColumnDataSource(new_stocks1)
-    new_data2 = ColumnDataSource(new_stocks2) 
-
-    data1 = new_data1
-    data2 = new_data2
+    data1 = new_stocks1
+    data2 = new_stocks2
 
     plot.xaxis.axis_label = stock1
     plot.yaxis.axis_label = stock2
